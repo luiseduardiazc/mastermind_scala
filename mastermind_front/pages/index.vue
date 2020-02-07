@@ -1,48 +1,65 @@
 <template>
-  <div class="container">
-   <h1>Master Mind</h1>
-  </div>
+    <div class="box">
+        <h1>Wellcome to Master Mind!</h1>
+        <p style="text-align: center;">
+        <img src="~/assets/logo.png" width="130"></p>
+        <button v-on:click='submit' class="myButton" >To Play</button>
+    </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+
 
 export default {
-  components: {
-    Logo
+  components: {},
+  methods: {
+    submit() {
+      console.log('LLamando a Dario ......')
+    }
   }
 }
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.box{
+    height: 350px;
+    width:480px;
+    padding: 40px;
+    margin: 0 auto;
+    border: 2px solid #87CEEB;
+    border-radius: 40px;
+    margin-top: 100px;
+    background-color: #6F7B80;
 }
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.myButton {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: 20px;
+    margin-bottom: -100;
+    background-color: #74B3CC;
+    border-radius:42px;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:28px;
+    padding:27px 68px;
+    text-decoration:none;
+    text-shadow:0px -1px 3px #91E0FF;
+    position: relative;
 }
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.myButton:hover {
+    background-color: #91E0FF;
+} 
+.myButton:active {
+    position:relative;
+    top:1px;
 }
-
-.links {
-  padding-top: 15px;
+h1 {
+    display: flex;
+    justify-content: center;
+    color: aqua;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #87CEEB;
 }
 </style>
